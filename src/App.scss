@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//common stylings
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+
+  h2{
+    margin-bottom:20px;
+  }
+
+  img{
+    width: 700px;
+    height:500px;
+  }
+}
+
+

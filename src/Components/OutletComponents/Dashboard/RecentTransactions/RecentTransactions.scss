@@ -1,0 +1,26 @@
+.table-container{
+    width:84%;
+
+    .complete-btn{
+        background-color:#18BB84;
+        color:white;
+        padding:10px;
+        border:none;
+        border-radius:2px;
+    }
+    .export-btn{
+        background-color:#4154E8;
+        color:white;
+        padding:10px 15px;
+        border:none;
+        border-radius:2px;
+
+        .icon{
+            font-size:1rem;
+          margin-right:5px;
+        }
+    }
+    .MuiPaper-elevation{
+        background-color: white;
+    }
+}

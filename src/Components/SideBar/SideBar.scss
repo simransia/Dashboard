@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.sidenav__container {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 77px rgba(0, 0, 0, 0.07);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+    }
+
+    .sidebar-icon {
+        font-size: 1.3rem;
+        margin-right: 10px;
+        color: #6B7D92;
+    }
+
+    .panel {
+        min-height: 3rem;
+        margin: 0;
+        padding-left: 18px;
+        width: 90%;
+        cursor: pointer;
+    }
+
+    .panel:nth-child(13) {
+        margin-top: 30px;
+    }
+
+    .section {
+        min-height: 2.5rem;
+        margin: 0;
+        padding-left: 18px;
+    }
+    .section:first-child{
+        padding-top:8px;
+        padding-bottom:7px;
+        border-bottom:1.5px solid rgba(121, 137, 156, 0.2);  ;
+
+        img{
+            margin-right:6px;
+        }
+    }
+    span {
+        font-size: 15px;
+        color: #6B7D92;
+    }
+
+    .MuiAccordion-root {
+        width: 90%;
+
+        &::before {
+            background: transparent;
+        }
+
+    }
+
+    .MuiAccordionSummary-root {
+
+        .MuiAccordionSummary-expandIconWrapper {
+            .MuiSvgIcon-root {
+                font-weight: 400;
+                font-style: normal;
+                color: #6B7D92;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .discover {
+        display: flex;
+        align-items: center;
+    }
+
+    .discover-notification {
+        background-color: #4154E8;
+        color: white;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 18px;
+    }
+
+    .panel-items {
+        border-left: 1.31px solid rgba(65, 84, 232, 0.38);
+        padding-left: .5rem;
+        margin-left: 4px;
+        background-color: rgba(65, 210, 232, 0.05);
+
+        a {
+            font-family: 'Poppins';
+            font-style: normal;
+            padding: 11.8px 23.5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #494949;
+            border-radius: 14.0756px;
+            text-transform: capitalize;
+
+            &.active {
+                background: rgba(65, 84, 232, 0.08);
+                font-weight: 600;
+                color: #4154E8;
+            }
+        }
+
+        a:hover {
+            background-color: #4154E8;
+            color: white;
+        }
+    }
+
+    .active {
+        background-color: #4154E8;
+        border-radius: 5px;
+
+        span {
+            color: white;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            .MuiSvgIcon-root {
+                color: white;
+            }
+        }
+
+        .sidebar-icon {
+            color: white;
+        }
+
+        .panel-items {
+            border-left: 1.31px solid white;
+
+            a {
+                color: white
+            }
+
+            a:hover {
+                background-color: white;
+                color: #4154E8;
+            }
+        }
+
+        .discover-notification {
+            background-color: white;
+            color: #4154E8;
+        }
+    }
+}

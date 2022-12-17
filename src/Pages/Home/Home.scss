@@ -1,0 +1,15 @@
+.home-admin__container {
+
+    .sidebar__container {
+        width:16%;
+        height: 100vh;
+        background-color: red;
+    }
+  
+    .main__container {
+        width:84%;
+        height: 100vh;
+        overflow-y: auto;
+  
+    }
+  }
