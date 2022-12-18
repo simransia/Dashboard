@@ -1,5 +1,6 @@
 ## Dashboard
-![Screenshot 2022-12-18 114913](https://user-images.githubusercontent.com/88017902/208284536-d0b31288-e751-4b44-8f4b-9a0577b89280.png)
+
+![final](https://user-images.githubusercontent.com/88017902/208291971-1b038425-6cdb-4152-9295-8a437350effd.png)
 
 
 
