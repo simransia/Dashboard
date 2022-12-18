@@ -9,11 +9,14 @@
         border-radius:2px;
     }
     .export-btn{
-        background-color:#4154E8;
-        color:white;
-        padding:10px 15px;
-        border:none;
-        border-radius:2px;
+        background-color: #4154E8;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 2px;
+        position: absolute;
+        top:20px;
+        right: 20px;
 
         .icon{
             font-size:1rem;
@@ -22,5 +25,27 @@
     }
     .MuiPaper-elevation{
         background-color: white;
+    }
+    .MuiToolbar-root {
+        position: relative;
+
+        .table-nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: left;
+            padding:15px 20px 5px 20px;
+            border-bottom:1.5px solid rgba(121, 137, 156, 0.3);
+
+            a{
+                margin-right: 15px;
+              
+            }
+            .active{
+                border-bottom:2px solid #4154E8;
+                color: #4154E8;
+                padding-bottom:4px;
+            }
+        }
     }
 }
