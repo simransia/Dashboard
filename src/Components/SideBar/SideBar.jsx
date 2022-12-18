@@ -34,13 +34,13 @@ function SideBar() {
         navigate(x);
         console.log("clicked")
     }
-    console.log(location.pathname === ROUTES.HOME + "/" + ROUTES.DASHBOARD)
+
     return (
         <Grid container className="sidenav__container" direction="column" justifyContent="flex-start" alignItems="center">
-             <Grid container item direction="row" justifyContent="flex-start" alignItems="center" className="section">
-                <img src={logo} width={40} height={40}/><h3>Artemis</h3>
+            <Grid container item direction="row" justifyContent="flex-start" alignItems="center" className="section">
+                <img src={logo} width={40} height={40} /><h3>Artemis</h3>
             </Grid>
-            <Divider/>
+            <Divider />
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center" className="section">
                 Main
             </Grid>
@@ -48,7 +48,7 @@ function SideBar() {
             <Accordion disableGutters elevation={0} defaultExpanded={true} expanded={expanded === 'dashboard'} id="dashboard"
                 onChange={handleAccordionChange('dashboard')}
                 onClick={() => handleClick(ROUTES.DASHBOARD)}
-                className={location.pathname === ROUTES.HOME + "/" + ROUTES.DASHBOARD && "active"}>
+                className={location.pathname === ROUTES.DASHBOARD ? "active" : ""}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                     <AvTimerOutlinedIcon className="sidebar-icon" />
                     <span>Dashboard</span>
@@ -61,18 +61,20 @@ function SideBar() {
                     </Grid>
                 </AccordionDetails>
             </Accordion>
+
             <Grid container item direction="row" justifyContent="space-between" alignItems="center" id="discover"
-                className={`panel ${location.pathname === ROUTES.HOME + "/" + ROUTES.DISCOVER && "active"}`}
+                className={`panel ${location.pathname === "/" + ROUTES.DISCOVER && "active"}`}
                 onClick={() => handleClick(ROUTES.DISCOVER)}>
                 <span className="discover"><LanguageOutlinedIcon className="sidebar-icon" />
                     <span>Discover</span>
                 </span>
                 <span className="discover-notification">4</span>
             </Grid>
+
             <Accordion disableGutters elevation={0} expanded={expanded === 'user'}
                 onChange={handleAccordionChange('user')}
                 onClick={() => handleClick(ROUTES.USER)}
-                className={location.pathname === ROUTES.HOME + "/" + ROUTES.USER && "active"}>
+                className={location.pathname === "/" + ROUTES.USER ? "active" : ""}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                     <PortraitOutlinedIcon className="sidebar-icon" />
                     <span >User</span>
@@ -85,10 +87,11 @@ function SideBar() {
                     </Grid>
                 </AccordionDetails>
             </Accordion>
+
             <Accordion disableGutters elevation={0} expanded={expanded === 'docs'}
                 onChange={handleAccordionChange('docs')}
                 onClick={() => handleClick(ROUTES.DOCUMENTS)}
-                className={location.pathname === ROUTES.HOME + "/" + ROUTES.DOCUMENTS && "active"}>
+                className={location.pathname === "/" + ROUTES.DOCUMENTS ? "active" : ""}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                     <AutoStoriesOutlinedIcon className="sidebar-icon" />
                     <span >Documents</span>
@@ -101,10 +104,11 @@ function SideBar() {
                     </Grid>
                 </AccordionDetails>
             </Accordion>
+
             <Accordion disableGutters elevation={0} expanded={expanded === 'applications'}
                 onChange={handleAccordionChange('applications')}
                 onClick={() => handleClick(ROUTES.APPLICATIONS)}
-                className={location.pathname === ROUTES.HOME + "/" + ROUTES.APPLICATIONS && "active"}>
+                className={location.pathname === "/" + ROUTES.APPLICATIONS ? "active" : ""}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                     <GridViewOutlinedIcon className="sidebar-icon" />
                     <span >Applications</span>
@@ -117,9 +121,10 @@ function SideBar() {
                     </Grid>
                 </AccordionDetails>
             </Accordion>
+
             <Accordion disableGutters elevation={0} expanded={expanded === 'pages'}
                 onChange={handleAccordionChange('pages')}
-                className={location.pathname === ROUTES.HOME + "/" + ROUTES.PAGES && "active"}
+                className={location.pathname === "/" + ROUTES.PAGES ? "active" : ""}
                 onClick={() => handleClick(ROUTES.PAGES)}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} >
                     <DescriptionOutlinedIcon className="sidebar-icon" />
@@ -138,28 +143,28 @@ function SideBar() {
                 Secondary
             </Grid>
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center"
-                className={`panel ${location.pathname === ROUTES.HOME + "/" + ROUTES.SUPPORT_CENTER && "active"}`}
+                className={`panel ${location.pathname === "/" + ROUTES.SUPPORT_CENTER && "active"}`}
                 onClick={() => handleClick(ROUTES.SUPPORT_CENTER)}>
                 < HelpOutlineOutlinedIcon className="sidebar-icon" /> <span >Support Center</span>
             </Grid>
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center"
-                className={`panel ${location.pathname === ROUTES.HOME + "/" + ROUTES.INBOX && "active"}`}
+                className={`panel ${location.pathname === "/" + ROUTES.INBOX && "active"}`}
                 onClick={() => handleClick(ROUTES.INBOX)}
             >
                 <InboxOutlinedIcon className="sidebar-icon" />  <span >Inbox</span>
             </Grid>
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center"
-                className={`panel ${location.pathname === ROUTES.HOME + "/" + ROUTES.FILE_MANAGER && "active"}`}
+                className={`panel ${location.pathname === "/" + ROUTES.FILE_MANAGER && "active"}`}
                 onClick={() => handleClick(ROUTES.FILE_MANAGER)}
             >
                 <FolderCopyOutlinedIcon className="sidebar-icon" />  <span >File Manager</span>
             </Grid>
-
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center"
-                className={`panel ${location.pathname === ROUTES.HOME + "/" + ROUTES.DATA_LIST && "active"}`}
+                className={`panel ${location.pathname === "/" + ROUTES.DATA_LIST && "active"}`}
                 onClick={() => handleClick(ROUTES.DATA_LIST)}>
                 <FormatListBulletedOutlinedIcon className="sidebar-icon" />  <span >Data List</span>
             </Grid>
+
             <Grid container item direction="row" justifyContent="flex-start" alignItems="center" className="panel">
                 <SettingsOutlinedIcon className="sidebar-icon" /><span> Settings</span>
             </Grid>
